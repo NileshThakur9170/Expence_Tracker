@@ -51,7 +51,7 @@ export async function registerUser(req, res) {
     });
 
   } catch (error) {
-  console.error("ERROR:", error.message); // 🔥 ADD THIS
+  console.error("ERROR:", error.message); 
   res.status(500).json({ success: false, message: error.message });
 }
 }
@@ -88,7 +88,7 @@ export async function loginUser(req, res) {
     });
 
   } catch (error) {
-  console.error("ERROR:", error.message); // 🔥 ADD THIS
+  console.error("ERROR:", error.message); 
   res.status(500).json({ success: false, message: error.message });
 }
 }
@@ -106,7 +106,7 @@ export async function getCurrentUser(req, res) {
     res.json({ success: true, user });
 
   } catch (error) {
-    console.error("ERROR:", error.message); // 🔥 ADD THIS
+    console.error("ERROR:", error.message); 
     res.status(500).json({ success: false, message: error.message });
   }
 }
@@ -139,7 +139,7 @@ export async function updateProfile(req, res) {
     res.json({ success: true, user });
 
   } catch (error) {
-    console.error("ERROR:", error.message); // 🔥 ADD THIS
+    console.error("ERROR:", error.message);
     res.status(500).json({ success: false, message: error.message });
   }
 }
@@ -172,7 +172,7 @@ export async function updatePassword(req, res) {
     res.json({ success: true, message: "Password updated successfully" });
 
   } catch (error) {
-    console.error("ERROR:", error.message); // 🔥 ADD THIS
+    console.error("ERROR:", error.message); 
     res.status(500).json({ success: false, message: error.message });
   }
 }

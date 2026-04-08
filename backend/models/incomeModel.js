@@ -20,7 +20,7 @@ const incomeSchema = new mongoose.Schema(
     },
     userId: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: "User", // ✅ fixed (capital + consistent)
+      ref: "User", 
       required: true,
     },
     type: {
@@ -29,11 +29,10 @@ const incomeSchema = new mongoose.Schema(
     },
   },
   {
-    timestamps: true, // ✅ CORRECT PLACE
+    timestamps: true,
   }
 );
 
-// ✅ safer model creation
 const incomeModel =
   mongoose.models.Income || mongoose.model("Income", incomeSchema);
 

@@ -1,11 +1,11 @@
 import incomeModel from "../models/incomeModel.js";
 import XLSX from "xlsx";
-import getDateRange from "../utils/dataFilter.js";
+import getDateRange from "../utils/getDateRange.js";
 
 
 // ================= ADD INCOME =================
 export async function addIncome(req, res) {
-    const userId = req.user.id;
+    const userId = req.user._id;
     const { description, amount, category, date } = req.body;
 
     try {
